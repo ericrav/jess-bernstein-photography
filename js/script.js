@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+
+    imagesLoaded(".gallery", function() {
+
+        var msnry = new Masonry( ".gallery", {
+            gutter: 30,
+            itemSelector: "img"
+        });
+
+    });
+
     var blanket = $(".blanket");
     var galleryImage = $(".gallery-fullscreen .image");
     var gallery = $(".gallery-fullscreen");
@@ -51,19 +61,19 @@ $(document).ready(function() {
     });
 
 
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll > 90) {
-            $(".header").addClass("hidden");
-            $(".nav.original").addClass("fixed");
-            $(".clone").addClass("standin");
-            if (scroll > 180) $(".section-header").addClass("visible");
-            else $(".section-header").removeClass("visible");
-        } else {
-            $(".section-header").removeClass("visible");
-            $(".header").removeClass("hidden");
-            $(".nav.original").removeClass("fixed");
-            $(".clone").removeClass("standin");
-        }
-    });
+    // $(window).scroll(function() {
+    //     var scroll = $(window).scrollTop();
+    //     if (scroll > 90) {
+    //         $(".header").addClass("hidden");
+    //         $(".nav.original").addClass("fixed");
+    //         $(".clone").addClass("standin");
+    //         if (scroll > 180) $(".section-header").addClass("visible");
+    //         else $(".section-header").removeClass("visible");
+    //     } else {
+    //         $(".section-header").removeClass("visible");
+    //         $(".header").removeClass("hidden");
+    //         $(".nav.original").removeClass("fixed");
+    //         $(".clone").removeClass("standin");
+    //     }
+    // });
 });

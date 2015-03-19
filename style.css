@@ -4,12 +4,13 @@
 
 html, body {
     width: 100%;
+    overflow-x: hidden;
     min-height: 100%;
     padding: 0;
     margin: 0;
 }
 body {
-    background-color: white;
+    background: #f4f4f4;
     padding-top: 90px;
     padding-bottom: 100px;
 }
@@ -18,111 +19,70 @@ ul, li {
 }
 
 .shrimp-container {
+    cursor: pointer;
     z-index: 15;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    line-height: 70px;
-    padding: 5px 12px;
+    height: 120px;
+    width: 120px;
+    line-height: 120px;
+    background-color: rgba(255, 235, 175, 0.85);
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    transition: background-color 1.5s;
 }
 .logo {
     margin: auto 0;
-    height: 60px;
+    height: 75px;
     width: auto;
     vertical-align: middle;
 }
-
-.header, .header.hidden:hover {
-    z-index: 10;
-    position: fixed;
-    overflow: visible;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    padding: 5px 0;
-    background: #FFE082;
-    -webkit-transition: height .4s, padding .4s;
-    transition: height .4s, padding .4s;
-}
-.header.hidden {
-    height: 1px;
-    padding: 2px 0;
-}
-
-.brand, .hidden:hover .brand {
-    float: left;
-    opacity: 1;
-    -webkit-transition: opacity .25s;
-    transition:  opacity .25s;
+.shrimp-container:hover {
+    background-color: rgba(255, 235, 175, 0.45);
 }
 
 .name {
+    cursor: pointer;
     color: #455A64;
     font-size: 34px;
-    line-height: 70px;
-    text-decoration: none;
-    padding-left: 100px;
-    display: inline-block;
-    font-family: "Karla", Helvetica;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'EB Garamond', Georgia, serif;
     -webkit-transition: color .25s;
     transition: color .25s;
+    margin: 15px 0 25px;
+    white-space: nowrap;
 }
 .name:hover {
     color: #263238;
 }
-.hidden .brand {
-    pointer-events: none;
-    opacity: 0;
-    /*-webkit-transition: opacity .25s ease .4s;*/
-    /*transition:  opacity .25s ease .4s;*/
-}
 
 
 .nav {
-    position: relative;
-    top: 10px;
-    left: 0;
-    margin-left: 100px;
-    margin-right: 40px;
-    display: inline-block;
-    min-width: 200px;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    min-width: 180px;
     float: left;
 }
-.nav.fixed {
-    position: fixed;
-    top: 10px;
-    z-index: 8;
-}
 .nav ul {
-    padding-bottom: 10px;
     border-bottom: 1px solid #CFD8DC;
+    border-top: 1px solid #CFD8DC;
     margin-left: 0;
-    padding-left: 0;
+    padding: 10px 0;
 }
 .nav li {
     padding-left: 0px;
     display: block;
     margin-bottom: 15px;
 }
-.nav h1 {
-    font-family: 'Karla', Helvetica;
-    font-size: 20px;
-    color: #184D68;
-    margin-top: 0;
-    margin-left: 0;
-    /*height: 65px;*/
-    padding-bottom: 10px;
-    border-bottom: 1px solid #CFD8DC;
-    text-align: justify;
-    text-align-last: justify;
+.nav li:last-child {
+    margin-bottom: 0;
 }
 .nav li > a {
     text-decoration: none;
     font-size: 18px;
     color: #393D34;
-    font-family: 'Questrial', serif;
+    font-family: 'EB Garamond', Georgia, serif;
 }
 .nav li > a:hover, .nav li.active > a {
     -webkit-transition: color .5s;
@@ -143,16 +103,16 @@ ul, li {
     width: 100%;
 }
 .social > a {
-    color: #393D34;
+    color: #BEC2B9;
     font-size: 18px;
 }
 .social > a:hover {
-    color: #31809F;
+    color: #878983;
 }
 p {
     color: #393D34;
     text-align: center;
-    font-family: 'Questrial', serif;
+    font-family: 'EB Garamond', Georgia, serif;
 }
 p.location {
     font-size: 14px;
@@ -182,25 +142,21 @@ p.credit {
 }
 
 .gallery {
+    margin-left: 240px;
+    margin-right: 30px;
     position: relative;
     overflow: hidden;
+    text-align: right;
 }
 .gallery img {
-    position: relative;
     cursor: pointer;
-    margin: 15px;
-    border: 20px solid rgba(255,255,255,.67);
-    max-width: 40%;
+    margin-bottom: 30px;
+    width: 48%;
+    width: calc(33% - 30px);
     height: auto;
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
 }
 .gallery img:hover {
     z-index: 51;
-    -ms-transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
 }
 
 .section-header {
@@ -230,7 +186,7 @@ p.credit {
     text-decoration: none;
     padding-left: 361px;
     display: inline-block;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'Karla', Helvetica, sans-serif;
 }
 h2 .small {
     font-size: 18px;
@@ -265,8 +221,8 @@ h2 .small {
     right: 0;
     bottom: 0;
     z-index: 200;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
+    -webkit-transition: opacity 1.2s;
+    transition: opacity 1.2s;
     opacity: 0;
     pointer-events: none;
 }
