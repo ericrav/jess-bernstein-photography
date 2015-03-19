@@ -118,6 +118,7 @@ p {
 p.sbreak {
     margin-top: 70px;
     margin-bottom: 0;
+    opacity: .7;
 }
 p.location {
     font-size: 14px;
