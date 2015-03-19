@@ -115,10 +115,14 @@ p {
     text-align: center;
     font-family: 'EB Garamond', Georgia, serif;
 }
+p.sbreak {
+    margin-top: 70px;
+    margin-bottom: 0;
+}
 p.location {
     font-size: 14px;
     opacity: .8;
-    margin-top: 70px;
+    margin-top: 2px;
     margin-left: 0;
 }
 p.copy {
