@@ -161,7 +161,7 @@ p.credit {
 .gallery img {
     cursor: pointer;
     margin-bottom: 30px;
-    width: 48%;
+    width: 30%;
     width: calc(33% - 30px);
     height: auto;
 }
@@ -298,4 +298,18 @@ h2 .small {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+@media (max-width: 830px) {
+    .gallery img {
+        width: 48%;
+        width: calc(50% - 30px);
+    }
+}
+
+@media (min-width: 1100px) {
+    .gallery img {
+        width: 20%;
+        width: calc(25% - 30px);
+    }
 }
