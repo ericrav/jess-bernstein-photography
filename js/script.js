@@ -1,13 +1,9 @@
 $(document).ready(function() {
 
 
-    imagesLoaded(".gallery", function() {
-
-        var msnry = new Masonry( ".gallery", {
-            gutter: 30,
-            itemSelector: "img"
-        });
-
+    $(".gallery").justifiedGallery({
+        margins: 10,
+        rowHeight: 220
     });
 
     var blanket = $(".blanket");
