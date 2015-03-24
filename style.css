@@ -102,6 +102,13 @@ h2 {
     -webkit-transition: color .5s;
     transition: color .5s;
     color: #31809F;
+    position: relative;
+}
+
+.nav li > a:hover:before, .nav li.active > a:before {
+    content: "/";
+    position: absolute;
+    left: -20px;
 }
 
 .social {
