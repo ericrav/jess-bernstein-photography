@@ -158,7 +158,7 @@ p.credit {
     position: relative;
     overflow: hidden;
     text-align: left;
-    width: 80%;
+    width: auto;
 }
 .gallery img {
     cursor: pointer;
