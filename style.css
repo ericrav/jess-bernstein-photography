@@ -24,7 +24,7 @@ ul, li {
     height: 120px;
     width: 120px;
     line-height: 120px;
-    background-color: rgba(255, 235, 175, 0.85);
+    /*background-color: rgba(255, 235, 175, 0.85);*/
     border: 1px solid #BEC2B9;
     border-radius: 50%;
     text-align: center;
@@ -33,12 +33,12 @@ ul, li {
 }
 .logo {
     margin: auto 0;
-    height: 75px;
+    height: 65px;
     width: auto;
     vertical-align: middle;
 }
 .shrimp-container:hover {
-    background-color: rgba(255, 235, 175, 0.45);
+    background-color: rgba(255, 235, 175, 0.5);
 }
 
 .name {
