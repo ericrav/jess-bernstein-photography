@@ -43,48 +43,39 @@ ul, li {
 
 .name {
     cursor: pointer;
+    color: #455A64;
     font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 0;
+    font-family: 'Lato', sans-serif;
     -webkit-transition: color .25s;
     transition: color .25s;
-    margin: 15px 0 20px;
+    margin: 20px 0 10px;
+    white-space: nowrap;
 }
 .name:hover {
     color: #263238;
 }
 
-h1, h2 {
-    color: #455A64;
-    text-align: center;
-    font-weight: 100;
-    letter-spacing: 0;
-    font-family: 'Lato', sans-serif;
-    white-space: nowrap;
-}
-
-h2 {
-    border-bottom: 1px solid #CFD8DC;
-    font-size: 16px;
-    letter-spacing: 0.01em;
-    margin-bottom: 5px;
-}
-
 
 .nav {
     position: fixed;
-    top: 30px;
+    top: 20px;
     left: 30px;
     min-width: 150px;
     float: left;
 }
 .nav ul {
-    /*border-bottom: 1px solid #CFD8DC;*/
-    margin: 0;
-    padding: 5px 0 20px;
+    border-bottom: 1px solid #CFD8DC;
+    border-top: 1px solid #CFD8DC;
+    margin: 0 0 15px;
+    padding: 35px 0;
 }
 .nav li {
     padding-left: 0px;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     text-align: center;
 }
 .nav li:last-child {
@@ -92,7 +83,7 @@ h2 {
 }
 .nav li > a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     color: #393D34;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
@@ -112,10 +103,7 @@ h2 {
 }
 
 .social {
-    border-top: 1px solid #CFD8DC;
-    padding-top: 8px;
     margin-left: 0;
-    margin-top: 8px;
     position: absolute;
     left: 0;
     right: 0;
@@ -160,6 +148,14 @@ p.credit {
     opacity: .7;
     margin-left: 0;
     margin-top: 5px;
+}
+
+.clone {
+    display: none;
+}
+.clone.standin {
+    display: block;
+    visibility: hidden;
 }
 
 .gallery {
