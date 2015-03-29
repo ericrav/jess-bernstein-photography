@@ -11,10 +11,10 @@ $(document).ready(function() {
     var gallery = $(".gallery-fullscreen");
     var currentImage;
 
-    $(".gallery img").click(function(e) {
-        console.log(e);
-        currentImage = e.target;
-        var imgSrc = e.target.src;
+    $(".gallery > div").click(function(e) {
+        currentImage = this;
+        var imgSrc = $(currentImage).children("img").attr("src");
+        console.log(imgSrc);
         galleryImage.css("background-image", "url(" + imgSrc + ")");
         blanket.addClass("cover");
         gallery.addClass("active");
@@ -22,22 +22,22 @@ $(document).ready(function() {
         $(".next-image").removeClass("no-more");
         $(".prev-image").removeClass("no-more");
 
-        if ($(currentImage).next("img").length == 0) $(".next-image").addClass("no-more");
-        else if ($(currentImage).prev("img").length == 0) $(".prev-image").addClass("no-more");
+        if ($(currentImage).next("div").length == 0) $(".next-image").addClass("no-more");
+        else if ($(currentImage).prev("div").length == 0) $(".prev-image").addClass("no-more");
     });
 
     $(".prev-image").click(function(e) {
         $(".next-image").removeClass("no-more");
-        currentImage = $(currentImage).prev("img");
-        galleryImage.css("background-image", "url(" + $(currentImage).attr("src") + ")");
-        if ($(currentImage).prev("img").length == 0) $(".prev-image").addClass("no-more");
+        currentImage = $(currentImage).prev("div");
+        galleryImage.css("background-image", "url(" + $(currentImage).children("img").attr("src") + ")");
+        if ($(currentImage).prev("div").length == 0) $(".prev-image").addClass("no-more");
     });
 
     $(".next-image").click(function(e) {
         $(".prev-image").removeClass("no-more");
-        currentImage = $(currentImage).next("img");
-        galleryImage.css("background-image", "url(" + $(currentImage).attr("src") + ")");
-        if ($(currentImage).next("img").length == 0) $(".next-image").addClass("no-more");
+        currentImage = $(currentImage).next("div");
+        galleryImage.css("background-image", "url(" + $(currentImage).children("img").attr("src") + ")");
+        if ($(currentImage).next("div").length == 0) $(".next-image").addClass("no-more");
     });
 
     $(".close").click(function(e) {
