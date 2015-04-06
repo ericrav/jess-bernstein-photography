@@ -23,10 +23,15 @@ ul, li {
     display: inline-block;
     z-index: 15;
     width: 100%;
-    border-bottom: 1px solid rgba(100, 118, 199, 0.2);
+    /*border-bottom: 1px solid rgba(100, 118, 199, 0.2);*/
     text-align: center;
     margin: auto;
     padding-bottom: 22px;
+    transition: opacity .8s;
+    opacity: .55;
+}
+.shrimp-container:hover {
+    opacity: 1;
 }
 .logo {
     margin: auto 0;
@@ -112,6 +117,27 @@ ul, li {
 .social > a:hover {
     color: #878983;
 }
+
+.nav ul.social-links {
+    border-bottom: none;
+}
+.nav .social-links li {
+    margin-bottom: 14px;
+}
+.nav .social-links li > a {
+    font-size: 10px;
+    opacity: .8;
+    transition: opacity .4s;
+}
+.nav .social-links li > a:hover {
+    opacity: 1;
+}
+.nav .social-links li > a:hover:before{
+    content: "";
+    display: none;
+}
+
+
 p {
     color: #393D34;
     text-align: center;
